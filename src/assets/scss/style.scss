@@ -1,0 +1,48 @@
+@charset "utf-8";
+// 主色
+$primary: #f7971e;
+
+// 辅助色
+$info:#2d8cf0;
+$success:#19be6b;
+$warn:#ff9900;
+$error:#ed3f14;
+
+// 中性色
+$title:#1c2438;
+$content:#495060;
+$subcolor:#80848f;
+$disabled:#bbbec4;
+$border:#dddee1;
+$divider:#e9eaec;
+$background:#f1f1f1;
+
+// 画圆
+@mixin circle($db_radius){
+  width:$db_radius;
+  height:$db_radius;
+  line-height:$db_radius;
+  text-align: center;
+  border-radius:$db_radius;
+}
+// 2D平移
+@mixin translate($x,$y){
+  transition: all .3s;
+  &:hover{
+    transform:translate($x,$y);
+  }
+}
+// 放大
+@mixin scale($n){
+  transition: all .3s;
+  &:hover{
+    transform:scale($n);
+  }
+}
+
+//
+@mixin ellipsis(){
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
